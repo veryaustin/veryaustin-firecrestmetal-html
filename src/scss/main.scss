@@ -1,1 +1,137 @@
 @import 'normalize';
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+$white: #FFFFFF;
+$light-grey: #C7C7C7;
+$light-border-grey: #E0E0E5;
+$dark-grey: #191919;
+$black: #000000;
+$highlight: #7BBD79;
+
+
+// ------ Global Styles  ------ //
+
+h1, h2, h3, h4, h5, h6, p {
+  color: $white;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 400;
+  line-height: .9em;
+}
+h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 25px 0px;
+  width: 100%;
+}
+
+// ------ Section Styles  ------ //
+
+#banner {
+  background: linear-gradient(rgba(9, 9, 9, 0.82), rgba(9, 9, 9, 0.82)), url(../img/mixingboard.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  h2 {
+    font-family: helvetica, sans-serif;
+    font-weight: 300;
+  }
+}
+
+#credits, #contact {
+  text-align: center;
+  h1 {
+    color: $light-grey;
+    font-size: 2.7em;
+    font-weight: 500;
+  }
+}
+
+#credits {
+  background-color: $dark-grey;
+  img {
+    width: 80%;
+    margin: 10px
+  }
+}
+
+.album {
+  h4 {
+    font-size: 1.1em;
+    margin: .3em;
+  }
+  p {
+    font-size: 1em;
+    margin: 1em;
+  }
+}
+
+#contact {
+  background-color: $black;
+  input {
+    height: 50px;
+  }
+  input, textarea {
+    box-sizing: border-box;
+    min-width: 260px;
+    display: block;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid $light-border-grey;
+    border-radius: 3px;
+    resize: none;
+  }
+  input[type=button],input[type=submit], input[type=reset] {
+    display: block;
+    background-color: $highlight;
+    color: $white;
+    text-decoration:none;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 25px;
+    &:hover {
+      background-color: lighten($highlight, 5%);
+    }
+  }
+}
+
+// Desktop
+//
+
+// h1 {
+//     font-size: 2.0em;
+// }
+// h2 {
+//     font-size: 2.0em;
+// }
+
+// #credits{
+  // h1{
+  //   font-size: 2.7em;
+  // }
+// }
