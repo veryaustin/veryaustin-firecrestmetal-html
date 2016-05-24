@@ -1,10 +1,5 @@
 @import 'normalize';
 
-body {
-  margin: 0;
-  font-family: 'Raleway', sans-serif;
-}
-
 $white: #FFFFFF;
 $light-grey: #C7C7C7;
 $light-border-grey: #E0E0E5;
@@ -12,11 +7,13 @@ $dark-grey: #191919;
 $black: #000000;
 $highlight: #7BBD79;
 
-
-// ------ Global Styles  ------ //
-
-h1, h2, h3, h4, h5, h6, p {
+// Global //
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
   color: $white;
+  background-color: $black;
+  text-align: center;
 }
 
 h1 {
@@ -24,17 +21,18 @@ h1 {
   font-weight: 400;
   line-height: .9em;
 }
+
 h2 {
   font-size: 1.5em;
   font-weight: 400;
 }
 
-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+section {
+  h1 {
+    font-size: 2.7em;
+    font-weight: 500;
+    color: $light-grey;
+  }
 }
 
 .wrapper {
@@ -50,49 +48,49 @@ header {
   width: 100%;
 }
 
-// ------ Section Styles  ------ //
-
-#banner {
+// Main Home Page
+header {
   background: linear-gradient(rgba(9, 9, 9, 0.82), rgba(9, 9, 9, 0.82)), url(../img/mixingboard.jpg) no-repeat center;
   background-size: cover;
   height: 100vh;
-  text-align: center;
-  h2 {
-    font-family: helvetica, sans-serif;
-    font-weight: 300;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  .fa {
+    transition: all .2s ease-in-out;
+    &:hover {
+      transform: scale(1.4);
+    }
   }
 }
 
-#credits, #contact {
-  text-align: center;
-  h1 {
-    color: $light-grey;
-    font-size: 2.7em;
-    font-weight: 500;
-  }
-}
 
+
+// Credits
 #credits {
   background-color: $dark-grey;
   img {
-    width: 80%;
+    max-width: 80%;
     margin: 10px
   }
+  .album {
+    text-align: center;
+    h4 {
+      font-size: 1.1em;
+      margin: .3em;
+    }
+    p {
+      font-size: 1em;
+      margin: 1em;
+    }
+  }
 }
 
-.album {
-  h4 {
-    font-size: 1.1em;
-    margin: .3em;
-  }
-  p {
-    font-size: 1em;
-    margin: 1em;
-  }
-}
-
+// Contact
 #contact {
-  background-color: $black;
+  margin-bottom: 50px;
   input {
     height: 50px;
   }
@@ -119,6 +117,17 @@ header {
     }
   }
 }
+
+footer {
+  box-sizing: border-box;
+  background-color: $black;
+  height: 125px;
+  border-top: 1px solid $dark-grey;
+  padding: 50px;
+  font-size: .5em;
+  text-align: left;
+}
+
 
 // Desktop
 //
