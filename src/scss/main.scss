@@ -8,6 +8,7 @@ $black: #000000;
 $highlight: #7BBD79;
 
 // Global //
+
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
@@ -25,6 +26,11 @@ h1 {
 h2 {
   font-size: 1.5em;
   font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
 }
 
 section {
@@ -65,8 +71,6 @@ header {
     }
   }
 }
-
-
 
 // Credits
 #credits {
